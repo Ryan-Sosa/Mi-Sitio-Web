@@ -1,0 +1,274 @@
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container position-relative">
+
+            <!-- BOTÓN MENÚ HAMBURGUESA -->
+            <button id="hamburger-btn" class="hamburger-btn">
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+
+            <!-- MENÚ HAMBURGUESA - CONTENEDOR -->
+            <div id="menu-hamburguesa" class="menu-hamburguesa">
+
+                <!-- BOTÓN PARA CERRAR MENÚ HAMBURGUESA -->
+                <button id="menu-close" class="menu-close-btn" aria-label="Cerrar menú">
+                    <ion-icon name="close-outline"></ion-icon>
+                </button>
+
+                <ul>
+                    <li><a href="/index.html">Inicio</a></li>
+
+                    <li class="li-con-submenu">
+                        <div class="submenu-header">
+                            <a href="/assets/HTML/hardware.html">Hardware</a>
+                            <button class="submenu-toggle" aria-label="Mostrar submenú Hardware">
+                                <ion-icon name="chevron-down-outline"></ion-icon>
+                            </button>
+                        </div>
+                        <ul class="submenu">
+                            <li><a href="/assets/HTML/hardware/gabinete.html">Gabinete</a></li>
+                            <li><a href="/assets/HTML/hardware/procesador.html">Procesador</a></li>
+                            <li><a href="/assets/HTML/hardware/placamadre.html">Placa Madre</a></li>
+                            <li><a href="/assets/HTML/hardware/ram.html">Memoria RAM</a></li>
+                            <li><a href="/assets/HTML/hardware/placadevideo.html">Placa de Video</a></li>
+                            <li><a href="/assets/HTML/hardware/almacenamiento.html">Almacenamiento</a></li>
+                            <li><a href="/assets/HTML/hardware/fuentedealimentacion.html">Fuente de Alimentación</a>
+                            </li>
+                            <li><a href="/assets/HTML/hardware/perifericos.html">Periféricos</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="li-con-submenu">
+                        <div class="submenu-header">
+                            <a href="/assets/HTML/software.html">Software</a>
+                            <button class="submenu-toggle" aria-label="Mostrar submenú Software">
+                                <ion-icon name="chevron-down-outline"></ion-icon>
+                            </button>
+                        </div>
+                        <ul class="submenu">
+                            <li><a href="/assets/HTML/software/programas.html">Programas</a></li>
+                            <li><a href="/assets/HTML/software/drivers.html">Drivers</a></li>
+                            <li><a href="/assets/HTML/software/sistemasoperativos.html">Sistemas Operativos</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="li-con-submenu">
+                        <div class="submenu-header">
+                            <a href="/assets/HTML/guias.html">Guías</a>
+                            <button class="submenu-toggle" aria-label="Mostrar submenú Guías">
+                                <ion-icon name="chevron-down-outline"></ion-icon>
+                            </button>
+                        </div>
+                        <ul class="submenu">
+                            <li><a href="/assets/HTML/guias/instalaciones.html">Instalaciones</a></li>
+                            <li><a href="/assets/HTML/guias/optimizaciones.html">Optimizaciones</a></li>
+                            <li><a href="/assets/HTML/guias/consejos.html">Consejos</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="/assets/HTML/acercade.html">Acerca de</a></li>
+                </ul>
+            </div>
+
+
+            <!-- BARRA DE NAVEGACIÓN -->
+            <a class="navbar-brand" href="/index.html">
+                <img src="/images/logo.png" alt="logo">
+            </a>
+
+            <div class="collapse navbar-collapse justify-content-center" id="menu">
+
+                <ul class="navbar-nav gap-2">
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="/assets/HTML/hardware.html" id="hardwareDropdown"
+                            role="button">Hardware</a>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="/assets/HTML/hardware/gabinete.html"><i
+                                        class="bi bi-cpu"></i>Gabinete</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/assets/HTML/hardware/procesador.html">Procesador</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/assets/HTML/hardware/placamadre.html">Placa Madre</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/assets/HTML/hardware/ram.html">Memoria RAM</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/assets/HTML/hardware/placadevideo.html">Placa de
+                                    Video</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                    href="/assets/HTML/hardware/almacenamiento.html">Almacenamiento</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/assets/HTML/hardware/fuentedealimentacion.html">Fuente
+                                    de Alimentación</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/assets/HTML/hardware/perifericos.html">Periféricos</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="/assets/HTML/software.html" id="softwareDropdown"
+                            role="button">Software</a>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="/assets/HTML/software/programas.html">Programas</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/assets/HTML/software/drivers.html">Drivers</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/assets/HTML/software/sistemasoperativos.html">Sistemas
+                                    Operativos</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="/assets/HTML/guias.html" id="guiasDropdown"
+                            role="button">Guías</a>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="/assets/HTML/guias/instalaciones.html">Instalaciones</a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item"
+                                    href="/assets/HTML/guias/optimizaciones.html">Optimizaciones</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/assets/HTML/guias/consejos.html">Consejos</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/assets/HTML/acercade.html">Acerca de</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- FORMULARIO! -->
+            <button id="btn-abrir-login" class="btn-abrir"> <!-- BOTÓN PARA ABRIR FORMULARIOS -->
+                <ion-icon name="person-circle-outline"></ion-icon>
+            </button>
+
+            <button id="user-menu-btn"> <!-- BOTÓN DE MENÚ DE USUARIO -->
+                <ion-icon name="person-circle-outline"></ion-icon>
+            </button>
+
+            <div id="user-dropdown" class="user-dropdown hidden">
+                <span id="dropdown-username"></span>
+                <button id="dropdown-logout">Cerrar sesión</button>
+            </div>
+
+
+
+            <div id="login-popup-overlay" class="popup-overlay">
+                <div class="popup">
+                    <button class="btn-cerrar" id="btn-cerrar-login">
+                        <ion-icon name="close-circle"></ion-icon>
+                    </button>
+
+                    <!-- FORMULARIO LOG-IN -->
+                    <form id="form-login" class="login-form">
+                        <h3>¡Bienvenido!</h3>
+                        <label for="email">Correo electrónico</label>
+                        <div class="input-icon">
+                            <ion-icon name="mail-sharp"></ion-icon>
+                            <input id="email" type="email" placeholder="E-Mail" required />
+                        </div>
+                        <label for="password">Contraseña</label>
+                        <div class="input-icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                            <input id="password" type="password" placeholder="Contraseña" required />
+                        </div>
+                        <button class="btn-login">Iniciar sesión</button>
+                        <p>No tenés cuenta? <a href="#" id="link-a-registro">Registrate acá!</a></p>
+                    </form>
+
+                    <!-- FORMULARIO DE REGISTRO -->
+                    <form id="form-registro" class="login-form" style="display: none;">
+                        <h3>¡Registrate!</h3>
+                        <!-- DIV PARA MENSAJES DE ERROR -->
+                        <div id="error-message"></div>
+                        <!-- Nombre de usuario -->
+                        <label for="username-reg">Nombre de usuario</label>
+                        <div class="input-icon">
+                            <ion-icon name="person-circle"></ion-icon>
+                            <input id="username-reg" type="text" maxlength="20" placeholder="Nombre de usuario" required>
+                        </div>
+                        <!-- Correo electrónico -->
+                        <label for="email-reg">Correo electrónico</label>
+                        <div class="input-icon">
+                            <ion-icon name="mail-sharp"></ion-icon>
+                            <input id="email-reg" type="email" placeholder="E-Mail" required>
+                        </div>
+                        <!-- Contraseña -->
+                        <label for="password-reg">Contraseña</label>
+                        <div class="input-icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                            <input id="password-reg" type="password" placeholder="Contraseña" required>
+                        </div>
+                        <!-- Confirmar contraseña -->
+                        <label for="confirm-password-reg">Confirmar contraseña</label>
+                        <div class="input-icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                            <input id="confirm-password-reg" type="password" placeholder="Confirmar contraseña"
+                                required>
+                        </div>
+
+                        <button class="btn-login">Registrarme</button>
+                        <p>¿Ya tenés cuenta? <a href="#" id="link-a-login">Iniciá sesión</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div id="global-message" class="global-message"></div>
+
+
+<!-- BOTÓN PARA CAMBIAR EL TEMA -->
+<span>
+    <button id="toggle-theme" class="btn btn-outline-light btn-sm" aria-label="Cambiar tema">
+        <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icon-tabler-bulb-off">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7" />
+            <path
+                d="M11.089 7.083a5 5 0 0 1 5.826 5.84m-1.378 2.611a5.012 5.012 0 0 1 -.537 .466a3.5 3.5 0 0 0 -1 3a2 2 0 1 1 -4 0a3.5 3.5 0 0 0 -1 -3a5 5 0 0 1 -.528 -7.544" />
+            <path d="M9.7 17h4.6" />
+            <path d="M3 3l18 18" />
+        </svg>
+    </button>
+</span>
+
+<!-- Bootstrap y jQuery -->
+<script src="/assets/frameworks/jquery-3.7.1.min.js"></script>
+<script src="/assets/frameworks/bootstrap-5.3.7-dist/js/bootstrap.min.js"></script>
+<script src="/assets/frameworks/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Íconos de ionic.io/ionicons -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
