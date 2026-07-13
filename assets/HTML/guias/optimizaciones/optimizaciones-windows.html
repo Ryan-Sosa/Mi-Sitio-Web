@@ -1,0 +1,188 @@
+<!-- ESTE ARCHIVO LO DEJO COMO REFERENCIA EN CASO DE NO SABER COMO ERA ANTES DE MODIFICAR TODOS LOS DEMÁS HTML DE CONTENIDO. 
+ SOLO LO DEJO POR SI ACASO (NO UTILIZAR!) -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows - Optimizaciones</title>
+
+    <!-- SCRIPT PARA EVITAR PARPADEO AL REFRESCAR LA PÁGINA -->
+    <script src="/assets/JS/theme-init.js"></script>
+
+    <link rel="stylesheet" href="/assets/frameworks/bootstrap-5.3.7-dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/assets/CSS/header.css">
+    <link rel="stylesheet" href="/assets/CSS/footer.css">
+    <link rel="stylesheet" href="/assets/CSS/responsive.css">
+    <link rel="stylesheet" href="/assets/CSS/pages.css">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+</head>
+
+<body class="guias-optimizaciones-page" data-page="optimizaciones-windows">
+    <!-- HEADER -->
+    <div id="header-placeholder"></div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container my-2">
+        <div class="row">
+
+            <!-- COLUMNA DE CONTENIDO Y TÍTULO -->
+            <div class="col-lg-8 col-md-12 content-wrapper">
+                <section class="page-header container my-3">
+                    <h1 class="section-title">OPTIMIZAR WINDOWS 11</h1>
+                </section>
+
+                <!-- CONTENIDO -->
+                <section class="page-content container my-5">
+                    <h2>¿Qué significa optimizar Windows y para qué sirve?</h2>
+
+                    <p>Optimizar Windows significa hacer pequeños ajustes o "tweaks" en el sistema con el objetivo de
+                        que funcione más rápido, fluido y eficiente. Se trata de configurar correctamente opciones que
+                        vienen por defecto y que, con el tiempo, pueden afectar el rendimiento.</p>
+
+                    <p>Si usamos la computadora a diario, es normal que Windows acumule programas innecesarios, procesos
+                        en segundo plano y archivos que ya no se usan. Todo esto puede hacer que la computadora arranque
+                        más lento
+                        o responda peor.</p>
+
+                    <p>En esta guía proporcionaremos algunas optimizaciones simples y seguras, pensadas para mejorar el
+                        rendimiento general del sistema y aprovechar mejor los recursos del equipo, sin instalar
+                        programas externos ni tocar configuraciones muy avanzadas.</p>
+
+                    <img class="page-content-images img-fluid" src="./images/Windows11.png" alt="Windows-11">
+
+                </section>
+
+                <hr>
+
+                <section class="page-content container my-5">
+                    <h3>Optimización #1: Reducción de efectos visuales</h3>
+                    <p>Para aumentar el rendimiento podemos reducir los efectos visuales que Windows trae activados por
+                        defecto.</p>
+                    <ol>
+                        <li>Presionamos la combinación de teclas <b>Win + R</b>. Al hacerlo, se abrirá esta
+                            ventana:
+                            <img class="page-content-sub-images img-fluid img-ampliable"
+                                src="./images/windows-optimizacion1-Paso1.png" alt="Optimizacion1-Paso1">
+                        </li>
+                        <li>En el campo de texto escribiremos <b>SystemPropertiesPerformance</b> y hacemos clic en
+                            <b>Aceptar</b>. Se abrirá la siguiente ventana:
+                            <img class="page-content-sub-images img-fluid img-ampliable"
+                                src="./images/windows-optimizacion1-Paso2.png" alt="Optimizacion1-Paso2">
+                        </li>
+                        <li>Dejamos las opciones como se ve en la imagen. En caso de querer un mayor rendimiento,
+                            seleccionamos "Ajustar para obtener el mejor rendimiento".</li>
+                        <li>Luego, presionamos la combinación de teclas <b>Win + i</b> y nos dirigimos a
+                            <b>Personalización</b>, luego a <b>Colores</b>, y allí desactivamos los <b>Efectos de
+                                transparencia</b>.
+                            <img class="page-content-sub-images img-fluid img-ampliable"
+                                src="./images/windows-optimizacion1-Paso4.png" alt="Optimizacion1-Paso4">
+                        </li>
+                    </ol>
+                    <p>Realizado esos pasos, habremos desactivado varios efectos visuales de Windows que pueden
+                        perjudicar el rendimiento, sobre todo en computadoras un poco antiguas. De todas maneras, ayuda
+                        a cualquier computadora a disminuir ligeramente la latencia.</p>
+                </section>
+
+                <hr>
+
+                <section class="page-content container my-5">
+                    <h3>Optimización #2: Configuración de la memoria virtual</h3>
+                    <p>Windows, de manera predeterminada, administra la memoria virtual de forma automática. Esta
+                        memoria es utilizada
+                        como apoyo cuando la RAM no es suficiente, pero una mala configuración puede afectar el
+                        rendimiento. Configurarla adecuadamente nos puede dar una mayor estabilidad y un mejor
+                        funcionamiento del sistema.</p>
+                    <p>Para realizar la configuración, seguí los siguientes pasos:</p>
+                    <ol>
+                        <li>Presionamos <b>Win + R</b>. Se abrirá la ventana <b>Ejecutar</b>.
+                        </li>
+                        <li>En el campo de texto escribiremos <b>SystemPropertiesPerformance</b> y hacemos clic en
+                            <b>Aceptar</b>. Se abrirá la ventana de la optimización #1.
+                        </li>
+                        <li>Nos dirigimos a la pestaña <b>Opciones avanzadas</b> y, en la sección "Memoria virtual"
+                            hacemos clic en
+                            "Cambiar..."
+                            <img class="page-content-sub-images img-fluid img-ampliable"
+                                src="./images/windows-optimizacion2-Paso3.png" alt="Optimizacion2-Paso3">
+                            Se abrirá una nueva ventana:
+                            <img class="page-content-sub-images img-fluid img-ampliable"
+                                src="./images/windows-optimizacion2-Paso3-b.png" alt="Optimizacion2-Paso3-b">
+                        </li>
+                        <li>Desmarcamos la opción <b>"Administrar automáticamente el tamaño del archivo de
+                                paginación para todas las unidades"</b>.</li>
+                        <li>Seleccionamos la unidad donde está instalado Windows (por defecto C:) elegimos <b>Tamaño
+                                personalizado</b> y colocamos el valor correspondiente a nuestra memoria RAM tanto en
+                            <b>Tamaño inicial</b> como en <b>Tamaño máximo</b>. <br>
+                            En Windows, 1 GB equivale a 1024 MB.
+                            Por ejemplo, si la PC tiene 16 GB de RAM, el cálculo sería el siguiente:
+                            1024 x 16 = 16384 MB. <br>Luego hacemos clic en Establecer y quedaría algo así:
+                            <img class="page-content-sub-images img-fluid img-ampliable"
+                                src="./images/windows-optimizacion2-Paso5.png" alt="Optimizacion2-Paso5">
+                        </li>
+                        <li>Finalmente, presionamos <b>Aceptar</b> en todas las ventanas para guardar los cambios.</li>
+                    </ol>
+
+                    <p>Con estos seis pasos, habremos configurado la memoria virtual con un valor fijo, logrando que
+                        Windows no ajuste dinámicamente su tamaño y evitando así las fluctuaciones en la memoria
+                        administrada por el sistema.</p>
+                </section>
+
+                <hr>
+
+                <section class="page-content container my-5">
+                    <h3>Optimización #3: Desactivar aplicaciones de arranque</h3>
+                    <p>Hay aplicaciones que se ejecutan junto al arranque de Windows y eso puede ralentizar los tiempos
+                        de carga al iniciar el sistema.</p>
+                    <ol>
+                        <li>Hacemos clic derecho en la barra de tareas y seleccionamos <b>Administrador de tareas. Se
+                                nos abrirá una ventana.</b></li>
+                        <li>Nos dirigmos a "Aplicaciones de arranque" y allí hacemos clic derecho en el programa que
+                            deseamos desactivar al inicio de Windows y hacemos clic en "Deshabilitar".
+                            <img class="page-content-sub-images img-fluid img-ampliable"
+                                src="./images/windows-optimizacion3-Paso2.png" alt="Optimizacion3-Paso2">
+                        </li>
+                    </ol>
+                    <p>Desactivar aplicaciones de arranque hará que nuestro Windows inicie de forma más ligera, rápida y
+                        limpia.</p>
+                </section>
+                
+                <hr>
+
+                <section class="page-content container my-5">
+                    <h3>¿Es recomendable optimizar Windows?</h3>
+                    <p>Sí, es recomendable, ya que permitirá que el sistema funcione de manera más fluida, rápida y
+                        estable
+                        con el paso del tiempo. Realizar estos pequeños ajustes, nos permite reducir algunos tiempos de
+                        carga, mejorar la respuesta del sistema y aprovechar mejor los recursos del hardware, sobretodo
+                        en computadoras antiguas o con componentes limitados.</p>
+                </section>
+
+                <div id="comments-placeholder" class="mb-5 mt-5"></div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div id="sidebar-placeholder" class="sidebar col-lg-3 col-md-12"></div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap y jQuery -->
+    <script src="/assets/frameworks/jquery-3.7.1.min.js"></script>
+
+    <script src="/assets/frameworks/bootstrap-5.3.7-dist/js/bootstrap.min.js"></script>
+
+    <!-- Includes -->
+    <script src="/incluir.js"></script>
+    <script type="module" src="/incluir-firebase.js"></script>
+    <script src="/assets/JS/script.js"></script>
+</body>
+
+</html>

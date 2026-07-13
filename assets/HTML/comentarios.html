@@ -1,0 +1,30 @@
+<hr class="hr-comments">
+
+<section class="comments-section">
+    <h3 class="mb-5">Comentarios</h3>
+
+    <div class="comment-form">
+        <textarea id="comment-text" placeholder="Escribí un comentario..."></textarea>
+        <p id="comment-warning" class="comment-warning" style="display:none;">
+            Tenés que iniciar sesión para comentar.
+        </p>
+        <button id="btn-send-comment">Comentar</button>
+    </div>
+
+    <div id="comments-list">
+        <!-- COMENTARIOS RENDERIZADOS POR JS -->
+        <p class="comments-loading">Cargando comentarios...</p>
+    </div>
+</section>
+
+<div id="delete-modal" class="modal-overlay">
+    <div class="custom-modal">
+        <h3>Confirmación</h3>
+        <p>¿Desea borrar este comentario?</p>
+
+        <div class="modal-actions">
+            <button id="cancel-delete" class="btn-cancel">Cancelar</button>
+            <button id="confirm-delete" class="btn-delete">Eliminar</button>
+        </div>
+    </div>
+</div>
