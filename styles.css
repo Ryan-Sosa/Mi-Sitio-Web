@@ -1,0 +1,302 @@
+@font-face {
+      font-family: 'Bitcount';
+      src: url(fonts/BitcountGridDouble-VariableFont_CRSV\,ELSH\,ELXP\,slnt\,wght.ttf) format('truetype');
+      font-weight: normal;
+      font-style: normal;
+}
+
+@font-face {
+      font-family: 'Departure-Mono';
+      src: url(fonts/DepartureMono-Regular.otf) format('opentype');
+      font-weight: normal;
+      font-style: normal;
+}
+
+@font-face {
+      font-family: 'Roboto';
+      src: url(fonts/Roboto.ttf);
+      font-weight: normal;
+      font-style: normal;
+}
+
+@font-face {
+      font-family: 'Funnel Display';
+      src: url(fonts/FunnelDisplay-VariableFont_wght.ttf);
+      font-weight: normal;
+      font-style: normal;
+}
+
+:root {
+      --card-img-bg: #1a1a1a;
+      --hover-dark: #beffabea;
+      --hover-light: #4caf50;
+}
+
+html {
+      height: 100%;
+      margin: 0;
+}
+
+body {
+      font-family: 'Funnel Display', sans-serif;
+      min-height: 100vh;
+      /* para que el fondo cubra toda la pantalla */
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      background-color: #0f0f0f;
+      color: #f5f5f5;
+      padding-top: 88px;
+      /* header fijo */
+}
+
+main {
+      flex: 1;
+}
+
+html,
+body,
+.card,
+.card-body {
+      transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.card,
+.card-body {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-title {
+      pointer-events: none;
+      color: white;
+      font-family: 'Departure-Mono';
+      text-align: center;
+      width: fit-content;
+      margin: 1rem auto !important;
+      font-size: clamp(32px, 4vw, 48px);
+      text-shadow:
+            -1px -1px 0 rgba(255, 255, 255, .55),
+            1px -1px 0 rgba(255, 255, 255, .55),
+            -1px 1px 0 rgba(255, 255, 255, .25),
+
+            2px 2px 0 #317e44,
+            3px 3px 4px #45b160;
+}
+
+/* ------TARJETAS DEL INDEX------ */
+
+.cards-section {
+      margin-top: 1rem;
+}
+
+.card {
+      background-color: #1a1a1a;
+      color: #fff;
+      border: none;
+      text-decoration: none;
+      min-height: 150px;
+      max-width: 300px;
+      box-shadow: 0 0 16px rgba(0, 255, 100, 0.15);
+      border-radius: 24px;
+      margin: 0 auto;
+}
+
+.card-img-wrapper {
+      background-color: var(--card-img-bg);
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+}
+
+.card-body {
+      text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+      padding: 1.5rem 1rem;
+      margin-top: 0.5rem;
+      padding-top: 1rem;
+      background-color: #317e446e;
+      /* ANTES ERA #1f2d1f */
+      border-bottom-left-radius: 24px;
+      border-bottom-right-radius: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      flex-grow: 1;
+}
+
+.card-title {
+      font-weight: 600;
+}
+
+.card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 24px rgba(0, 255, 100, 0.5);
+}
+
+.card-img-top {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      padding: 1rem;
+      transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+      transform: rotate(-2deg) scale(1.05);
+}
+
+.card .btn {
+      transition: background-color 0.3s ease;
+}
+
+.card .btn:hover {
+      background-color: #ffcc00;
+      color: #000;
+}
+
+/* ------TARJETAS DEL INDEX (FIN)------ */
+
+
+
+/* ------TARJETAS HARDWARE------ */
+.hardware-cr {
+      max-width: 1280px;
+}
+
+.hardware-cr .card-title {
+      text-align: center;
+}
+
+/* ------TARJETAS HARDWARE (FIN)------ */
+
+
+
+/* ------TARJETAS SOFTWARE------ */
+.software-cr {
+      max-width: 1024px;
+}
+
+.software-cr .card-title {
+      text-align: center;
+}
+
+/* ------TARJETAS SOFTWARE (FIN)------ */
+
+
+
+/* ------TARJETAS GUÍAS------ */
+.guias-cr {
+      max-width: 1024px;
+}
+
+.guias-cr .card-title {
+      text-align: center;
+}
+
+/* ------TARJETAS GUÍAS (FIN)------ */
+
+
+
+
+
+/* ------BOTÓN TEMA CLARO/OSCURO------ */
+
+#toggle-theme {
+      margin-top: 20px;
+      margin-right: 20px;
+      margin-left: auto;
+      border-radius: 200px;
+      border-color: rgba(255, 255, 255, 0.090);
+      padding: 8px;
+      float: right;
+      /* PARA MOVER EL BOTÓN A LA DERECHA*/
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0px 0px 5px rgba(175, 175, 175, 0.18);
+      transform: scale(1);
+      transition: transform 0.2s ease-in-out;
+}
+
+#toggle-theme:hover {
+      transform: scale(1.08);
+      transition: transform 0.3s ease-in-out;
+}
+
+#theme-icon {
+      visibility: hidden;
+      transition: transform 0.5s ease;
+}
+
+/* ------BOTÓN TEMA CLARO/OSCURO (FIN)------ */
+
+
+
+/* ------MODO CLARO------ */
+
+html.light-theme body {
+      background-color: #f5f5f5;
+      color: #0f0f0f;
+      --card-img-bg: #ffffff;
+}
+
+html.light-theme #toggle-theme {
+      background-color: #ebebeb;
+      /* Fondo oscuro para el botón */
+      border-color: rgba(0, 0, 0, 0.090);
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.60);
+      /* Borde oscuro para que se vea bien en el fondo claro */
+}
+
+html.light-theme #toggle-theme:hover {
+      background-color: #f1f1f1;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+html.light-theme #toggle-theme svg {
+      stroke: #000000;
+      /* Con esto, el icono del SVG es negro en modo claro */
+}
+
+html.light-theme #theme-icon {
+      transform: rotate(180deg);
+}
+
+html.light-theme .section-title {
+      color: #bafdba;
+
+      text-shadow:
+            -1px -1px 0 #2f9b4a,
+            1px -1px 0 #2f9b4a,
+            -1px 1px 0 #2f9b4a,
+            1px 1px 0 #2f9b4a,
+
+            2px 2px 0 #1f6f34,
+            3px 3px 4px rgba(79, 201, 109, .45);
+}
+
+
+/* Solución al ícono estático al momento de refrescar la página teniendo el modo light activado y guardado. */
+html.light-theme #theme-icon.loaded {
+      transform: rotate(180deg);
+}
+
+/* -------------------------------------------------------------------------------------------------------- */
+
+html.light-theme #theme-icon svg {
+      fill: white !important;
+}
+
+html.light-theme .card {
+      background-color: #ffffff;
+      color: #000;
+}
+
+html.light-theme .card-body {
+      text-shadow: none;
+      background-color: #56db773b;
+      /* ANTES ERA #4fc96d27*/
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* ------MODO CLARO (FIN)------ */
