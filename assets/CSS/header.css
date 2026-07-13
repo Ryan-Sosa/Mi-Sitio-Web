@@ -1,0 +1,804 @@
+#header-placeholder {
+    height: 60px;
+}
+
+/* HEADER */
+.navbar {
+    transition: background-color 0.5s ease, color 0.5s ease;
+    min-height: 88px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* PARA QUE ESTÉ POR ENCIMA DE TODO */
+    background-image: url('/images/HEADER_FOOTER.png');
+}
+
+.navbar-brand {
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-brand img {
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+/* ------MENÚ HAMBURGUESA------ */
+
+/* ---Botón hamburguesa--- */
+.hamburger-btn {
+    display: none;
+    position: absolute;
+    left: 0;
+    padding: 0;
+    margin-left: 1rem;
+    font-size: 48px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.hamburger-btn:hover {
+    color: #beffabea;
+}
+
+/* ---Botón cerrar menú--- */
+.menu-close-btn {
+    border: none;
+    border-radius: 24px 0 0 24px;
+    background: none;
+    color: white;
+    font-size: 48px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: scale(1);
+    transition: transform .25s ease;
+}
+
+.menu-close-btn ion-icon {
+    display: flex;
+    justify-content: center;
+    /* centrar horizontalmente */
+    align-items: center;
+    /* centrar verticalmente */
+}
+
+.menu-close-btn:hover {
+    background-color: #ff3d3d;
+    transform: scale(1.1);
+    transition: transform .25s ease;
+}
+
+/* Menú lateral */
+.menu-hamburguesa {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #1e4d2a;
+    color: white;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 2rem;
+    z-index: 1000;
+}
+
+.menu-hamburguesa.active {
+    transform: translateX(0);
+    box-shadow: 10px 0 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Lista principal */
+.menu-hamburguesa ul {
+    list-style: none;
+    padding: 0;
+    margin: 3rem 0;
+}
+
+.menu-hamburguesa li {
+    margin-bottom: 1.6rem;
+}
+
+/* Enlaces del menú */
+.menu-hamburguesa li a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    transition: background-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.menu-hamburguesa li a:hover {
+    color: #beffabea;
+    transition: color 0.2s ease;
+}
+
+/* ---SUBMENÚS (MENÚ HAMBURGUESA)--- */
+
+/* Encabezado de ítem con submenú (texto + flecha) */
+.li-con-submenu>.submenu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Botón para desplegar submenú */
+.submenu-toggle {
+    background-color: #285f36;
+    border-radius: 24px;
+    border: 1px solid;
+    border-color: #507c5b;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.submenu-toggle:hover {
+    background-color: #285f36;
+    border-color: whitesmoke;
+}
+
+.submenu-toggle:hover ion-icon {
+    color: #56dd78;
+}
+
+.li-con-submenu.open .submenu-toggle ion-icon {
+    color: #4fc96d;
+}
+
+/* Flecha rotada cuando está abierto */
+.li-con-submenu.open>.submenu-header>.submenu-toggle {
+    transform: rotate(180deg);
+    background-color: #1c4626;
+}
+
+/* Submenú oculto */
+.submenu {
+    display: none;
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+}
+
+/* Submenú visible */
+.li-con-submenu.open>.submenu {
+    border-left: 2px solid #eeeeee44;
+    padding-left: 1rem;
+    display: block;
+    margin: 1rem;
+}
+
+/* Estilos internos del submenú */
+.menu-hamburguesa .submenu li {
+    margin-bottom: 0.7rem;
+}
+
+.menu-hamburguesa .submenu a {
+    font-size: 18px;
+    color: #ddd;
+    text-decoration: none;
+}
+
+/* ------FIN MENÚ HAMBURGUESA------ */
+
+
+
+.nav-item {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav .nav-item>.nav-link {
+    /* ACÁ ANTES HABÍA UN SCALE (1) */
+    transition: transform 0.3s ease-in-out
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    transition: background-color 0.3s, border-radius 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0f0f0f !important;
+}
+
+/* ARREGLO DE ACCESIBILIDAD EN NAV-LINKS (Hardware-Software-Guías Y "Acerca de", que esta última no tiene clase dropdown-toggle") */
+.nav-link:focus,
+.nav-link:focus-visible {
+    outline: 1px solid white;
+    box-shadow: none;
+    border-radius: 2px;
+}
+
+/* ARREGLO DE ACCESIBILIDAD EN NAV-LINKS (Hardware-Software-Guías) */
+.navbar-nav .dropdown-toggle:focus {
+    box-shadow: none;
+    outline: 1px solid white;
+    border-radius: 2px;
+}
+
+
+
+.navbar-nav .nav-item:hover>.nav-link,
+.navbar-nav .nav-item.show>.nav-link {
+    color: #beffabea !important;
+    transform: translateY(3px);
+    /* ANTES ERA SCALE (1.1) */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* DROPDOWN MENÚ */
+.dropdown-menu {
+    background-color: #22292d;
+    border: 1px solid var(--hover-light);
+    border-radius: 24px;
+    padding: 0;
+    left: 50% !important;
+    margin-top: 0 !important;
+    top: 100% !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: hidden;
+}
+
+.dropdown-menu.fade-in {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transform: translateX(-30%);
+    pointer-events: auto;
+}
+
+.dropdown-item {
+    color: #f5f5f5;
+    padding: 0.7rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* PRIMER Y ÚLTIMO ELEMENTO REDONDEADOS, LOS DEMÁS NO. ESTO LO HICE SACANDO EL BORDER-RADIUS EN .dropdown-item Y SELECCIONANDO EL PRIMER Y ÚLTIMO ELEMENTO DE LA LISTA */
+.dropdown-menu li:first-child .dropdown-item {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.dropdown-menu li:last-child .dropdown-item {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.dropdown-item:hover {
+    background-color: #317e44;
+    outline: 1px solid var(--hover-dark);
+    color: white;
+    text-shadow:
+        1px 1px 2px rgba(0, 0, 0, 0.8),
+        2px 2px 6px rgba(0, 0, 0, 0.6);
+    font-weight: 600;
+}
+
+/* DROPDOWN MENÚ (FIN) */
+
+/* Botones abrir */
+.btn-abrir {
+    display: inline-flex;
+    position: absolute;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-right: 1rem;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.btn-abrir:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.btn-abrir ion-icon {
+    font-size: 48px;
+    transition: color 0.3s;
+}
+
+.btn-abrir:hover ion-icon {
+    color: #beffabea;
+}
+
+
+
+/* Dropdown del menú de usuario */
+
+/* ------BOTÓN DEL MENÚ DE USUARIO (YA LOGUAEDO) (icono redondo)------ */
+#user-menu-btn {
+    display: inline-flex;
+    position: absolute;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-right: 1rem;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+#user-menu-btn ion-icon {
+    font-size: 48px;
+    transition: color 0.5s;
+}
+
+#user-menu-btn:hover ion-icon {
+    color: #beffabea;
+}
+
+/* Hover */
+#user-menu-btn:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+
+
+/* ------MENÚ DESPLEGABLE------ */
+
+.user-dropdown {
+    position: absolute;
+    top: 60px;
+    right: 15px;
+
+    background: rgba(20, 20, 20, 0.97);
+    color: white;
+
+    border-radius: 18px;
+    padding: 18px;
+    /* Más aire interno */
+
+    min-width: 200px;
+    width: max-content;
+    max-width: 260px;
+
+    flex-direction: column;
+    gap: 16px;
+    /* Más espacio entre items */
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-10px);
+
+    transition: all 0.2s ease;
+}
+
+.user-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* NOMBRE DE USUARIO */
+#dropdown-username {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    font-size: clamp(18px, 2vw, 24px);
+    word-break: break-word;
+
+    padding-bottom: 10px;
+    /* Más espacio */
+    margin-bottom: 15px;
+    /* Espacio extra */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Botón logout */
+#dropdown-logout {
+    padding: 10px;
+    width: 100%;
+
+    border: 1px solid rgba(235, 235, 235, 0.25);
+    border-radius: 24px;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    background-color: #317e44;
+    color: white;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#dropdown-logout:hover {
+    background-color: #ff3d3d;
+    transform: scale(1.05);
+}
+
+/* Dropdown del menú de usuario (FIN) */
+
+
+
+
+/* Overlay común para todos los popups */
+.popup-overlay {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    box-shadow: 0 0 8px;
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Popup común */
+.popup {
+    transform: scale(0.9);
+    opacity: 0;
+    transition: all 0.2s ease;
+
+    position: relative;
+    padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+    width: 450px;
+    max-height: 90vh;
+    overflow-y: auto;
+    color: #f0f0f0;
+    background-color: #1b1b1b;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 1);
+}
+
+.popup-overlay.active .popup {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Título */
+.popup h3 {
+    text-align: center;
+    background-color: #317e44;
+    color: white;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+    padding: 24px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin: -2.5rem -2.5rem 0.5rem -2.5rem;
+}
+
+/* Botón cerrar común */
+.btn-cerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    transform: scale(1);
+    transition: transform 0.2s;
+}
+
+.btn-cerrar:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s;
+}
+
+
+/* Formulario */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: white;
+}
+
+.login-form p {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.login-form label {
+    font-size: 20px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+}
+
+/* Iconos input */
+.input-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon ion-icon {
+    position: absolute;
+    left: 16px;
+    font-size: 20px;
+    color: #317e44;
+    pointer-events: none;
+}
+
+.input-icon input {
+    width: 100%;
+    padding: 12px 12px 12px 42px;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+    background-color: #2c2c2c;
+    color: white;
+}
+
+.input-icon input:focus {
+    border-color: #317e44;
+}
+
+.login-form a {
+    text-decoration: none;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+
+.btn-login {
+    background-color: #317e44;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    margin: 1.5rem 4rem 0 4rem;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transform: scale(1.0);
+    transition: transform 0.2s ease-out;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease-in;
+}
+
+#error-message {
+    color: #ff6b6b;
+    font-weight: 600;
+    display: none;
+    /* oculto por defecto */
+}
+
+.input-error {
+    border-color: red !important;
+    /* !important para asegurarme que sobreescriba otros estilos */
+    box-shadow: 0 0 5px red;
+}
+
+
+
+/* ------MENSAJE GLOBAL (TOAST)------ */
+#global-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    min-width: 250px;
+    padding: 12px 18px;
+    border-radius: 10px;
+    background: #333;
+    color: white;
+    font-size: 0.95rem;
+    opacity: 0;
+    transform: translateX(100%);
+    pointer-events: none;
+    z-index: 999999;
+    transition: opacity 0.5s ease, transform 0.35s ease;
+}
+
+/* Cuando se muestra */
+#global-message.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Tipos de mensaje */
+#global-message.success {
+    background: #28a745;
+}
+
+#global-message.error {
+    background: #dc3545;
+}
+
+#global-message.info {
+    background: #0d6efd;
+}
+
+
+/* Modo oscuro */
+[data-theme="dark"] #global-message {
+    background: #222;
+    color: #fff;
+}
+
+/* ------MENSAJE GLOBAL (TOAST) (FIN)------ */
+
+
+
+
+
+
+/* ======== MODO CLARO ======== */
+
+
+
+/* ------DROPDOWN - MODO CLARO------ */
+
+html.light-theme .user-dropdown {
+    background: rgb(240, 240, 240); /* gris muy suave */
+    color: #111;
+
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+html.light-theme #dropdown-username {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.30);
+}
+
+html.light-theme .dropdown-item:hover {
+    background-color: #4fc96d;
+    outline: 1px solid var(--hover-light);
+}
+
+html.light-theme #dropdown-logout {
+    background-color: #4fc96d;
+    border: 1px solid rgba(20, 20, 20, 0.25);
+}
+
+html.light-theme #dropdown-logout:hover {
+    background-color: #ff3d3d;
+}
+
+/* ------DROPDOWN - MODO CLARO (FIN) ------ */
+
+
+
+/* ------FORMULARIO - MODO CLARO------ */
+
+html.light-theme .popup {
+    background-color: rgb(253, 253, 253);
+    color: black;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+html.light-theme .popup h3 {
+    background-color: #4fc96d;
+}
+
+html.light-theme .login-form {
+    color: black;
+}
+
+html.light-theme .input-icon input {
+    background-color: white;
+    color: black;
+}
+
+html.light-theme .input-icon ion-icon {
+    color: #4fc96d;
+}
+
+.input-icon input:focus {
+    border-color: #4fc96d;
+}
+
+html.light-theme .btn-login {
+    background-color: #4fc96d;
+    color: white;
+}
+
+/* Borde de error */
+html.light-theme .input-error {
+    border-color: red !important;
+    box-shadow: 0 0 5px red;
+}
+
+/* ------FORMULARIO - MODO CLARO (FIN) ------ */
+
+
+
+/* ------MENÚ HAMBURGUESA - MODO CLARO------ */
+
+html.light-theme .menu-hamburguesa {
+    background-color: #4fc96d;
+}
+
+html.light-theme .menu-hamburguesa li a:hover {
+    color: #beffabea;
+}
+
+html.light-theme .submenu-toggle {
+    background-color: #56dd78;
+    border: solid 1px;
+    border-color: #80ffa0;
+}
+
+html.light-theme .submenu-toggle:hover {
+    background-color: #3ea357;
+    border-color: whitesmoke;
+}
+
+html.light-theme .li-con-submenu.open>.submenu-header>.submenu-toggle {
+    background-color: #3ea357;
+}
+
+html.light-theme .li-con-submenu.open .submenu-toggle ion-icon {
+    color: #8effb0;
+}
+
+.menu-hamburguesa .submenu a {
+    color: #ececec;
+}
+
+html.light-theme .li-con-submenu.open>.submenu {
+    border-left: 2px solid #eeeeee7a;
+}
+
+/* ------MENÚ HAMBURGUESA - MODO CLARO (FIN)------ */

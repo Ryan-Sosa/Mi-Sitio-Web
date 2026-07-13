@@ -1,0 +1,87 @@
+/* FOOTER */
+
+.footer {
+    background-image: url(/images/HEADER_FOOTER.png);
+    text-align: center;
+    min-height: 90px;
+    padding: 10px 0;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.footer-texto {
+    pointer-events: none;
+}
+
+/* FOOTER-ÍCONOS */
+
+.redes-sociales p {
+    transform: translate(-12px);
+    pointer-events: none;
+}
+
+.redes-sociales p img {
+    height: auto;
+    max-width: 24px;
+}
+
+footer [class*="-icon"] {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: transparent;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+footer [class*="-icon"]:hover {
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+footer [class*="-icon"] ion-icon {
+    font-size: 1.6rem;
+    color: #f8f9fa;
+    transition: color 0.3s ease;
+}
+
+/* FACEBOOK */
+footer .facebook-icon:hover {
+    background-color: #1877F2;
+}
+
+footer .facebook-icon:hover ion-icon {
+    color: white;
+}
+
+/* INSTAGRAM */
+footer .instagram-icon:hover {
+    background-color: #E1306C;
+}
+
+footer .instagram-icon:hover ion-icon {
+    color: white;
+}
+
+/* YOUTUBE */
+footer .youtube-icon:hover {
+    background-color: #FF0000;
+}
+
+footer .youtube-icon:hover ion-icon {
+    color: white;
+}
+
+/* TWITTER */
+footer .twitter-icon:hover {
+    background-color: #1DA1F2;
+}
+
+footer .twitter-icon:hover ion-icon {
+    color: white;
+}

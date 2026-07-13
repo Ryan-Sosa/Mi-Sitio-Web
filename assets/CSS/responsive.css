@@ -1,0 +1,425 @@
+@media screen and (max-height: 800px) {
+    body {
+        padding-top: 80px;
+    }
+
+    .navbar {
+        min-height: 80px;
+    }
+
+    #header-placeholder {
+        height: 0;
+    }
+
+    main.container {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+
+    .cards-section.row {
+        --bs-gutter-x: 1.5rem;
+    }
+
+    .card {
+        font-size: 14px;
+        border-radius: 12px;
+    }
+
+    .card-title,
+    .card-text {
+        text-align: left;
+    }
+
+    .card-title {
+        padding-left: 0.3rem;
+        font-size: 18px;
+    }
+
+    .card-text {
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+    }
+
+    .card-img-top {
+        height: 120px;
+        padding: 0.5rem;
+    }
+
+    .card-img-wrapper {
+        padding: 0.8rem;
+    }
+
+    .card-body {
+        padding: 0.5rem 0.5rem;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+
+    /* HARDWARE.HTML CONTAINER */
+    .hardware-cr.container {
+        max-width: 800px;
+        margin-bottom: 0 !important;
+    }
+
+    .hardware-cr .col-md-6.col-lg-4 {
+        max-width: 50%;
+        margin-top: 24px;
+    }
+
+    .hardware-cr .cards-section.row {
+        --bs-gutter-x: 2rem;
+        --bs-gutter-y: 2rem;
+    }
+
+    .hardware-cr .card {
+        max-width: 350px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 1366px) {
+    .navbar-brand img {
+        width: auto;
+        max-width: 237px;
+        max-height: 50px;
+        object-fit: contain;
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 991px) {
+
+    .dropdown-menu {
+        display: none;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        transform: translateY(0) !important;
+        position: static !important;
+        box-shadow: none;
+        margin-top: 0;
+        padding-left: 1rem;
+    }
+
+    .dropdown.show .dropdown-menu {
+        display: block;
+    }
+
+    .nav-link.dropdown-toggle::after {
+        display: none !important;
+    }
+
+    /* ACOMODAR LOGO AL LADO DEL MENÚ HAMBURGUESA Y MOSTRAR A PARTIR DE ESTE ANCHO */
+
+    .hamburger-btn {
+        display: flex;
+    }
+
+    .menu-hamburguesa {
+        display: block;
+    }
+
+    .navbar .container {
+        justify-content: flex-start;
+    }
+
+    .navbar-toggler {
+        margin-right: 0.5rem;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    .software-cr.container {
+        max-width: 1366px;
+    }
+
+    .software-cr .cards-section.row {
+        max-width: auto;
+        display: flex;
+        justify-content: center;
+        /* ÚLTIMO QUE CAMBIÉ 10/12/2025 */
+        /* centra horizontalmente si hace falta */
+        align-items: center;
+        /* centra verticalmente dentro del div */
+        flex-wrap: wrap;
+        /* para que las tarjetas no se desborden */
+        min-height: 50vh;
+    }
+
+
+    /* Ampliar tarjetas */
+    .software-cr div.col-md-6.col-lg-4 {
+        max-width: 300px !important;
+    }
+
+    .software-cr .card {
+        max-width: 100% !important;
+    }
+
+    /* Ampliar tarjetas (FIN) */
+
+
+    .software-cr .cards-section.row {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 1.5rem;
+    }
+
+    .guias-cr.container {
+        max-width: 1366px;
+    }
+
+    .guias-cr .cards-section.row {
+        max-width: auto;
+        display: flex;
+        justify-content: center;
+        /* ÚLTIMO QUE CAMBIÉ 10/12/2025 */
+        /* centra horizontalmente si hace falta */
+        align-items: center;
+        /* centra verticalmente dentro del div */
+        flex-wrap: wrap;
+        /* para que las cards no se desborden */
+        min-height: 50vh;
+    }
+
+    .guias-cr .col-md-6.col-lg-4 {
+        max-width: 300px !important;
+    }
+
+    .guias-cr .card {
+        max-width: 100% !important;
+    }
+
+    .guias-cr .cards-section.row {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 1.5rem;
+    }
+}
+
+
+
+@media screen and (min-width: 800px) and (max-height: 768px) {
+
+    /* HARDWARE.HTML - ANCHO DEL CONTAINER (AL BAJARLO,
+    SE SOLUCIONA EL PROBLEMA DEL GRAN ESPACIADO */
+    .hardware-cr.container {
+        max-width: 752px;
+        margin-bottom: 0 !important;
+    }
+
+    .hardware-cr .col-md-6.col-lg-4 {
+        max-width: 250px;
+        max-height: 200px;
+    }
+
+    .hardware-cr .card {
+        max-width: 250px;
+    }
+
+    .hardware-cr .card-img-top {
+        height: 110px;
+        padding: 0.5rem 0;
+    }
+
+    .hardware-cr .card-title {
+        font-size: 20px;
+        padding: 0;
+    }
+
+    .hardware-cr .card-img-wrapper {
+        padding: 0.5rem;
+    }
+
+    .hardware-cr .cards-section.row {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 1.5rem;
+    }
+
+
+    /* SOFTWARE.HTML */
+    .software-cr.container {
+        max-width: 752px;
+    }
+
+    .guias-cr.container {
+        max-width: 752px;
+    }
+}
+
+
+
+@media screen and (min-width: 577px) and (max-width: 799px) {
+
+    .hardware-cr.container {
+        max-width: 680px;
+        margin-top: 0.5rem;
+        margin-bottom: 3rem !important;
+    }
+
+    .hardware-cr .card {
+        max-width: 290px;
+        margin: auto;
+        /* Le das un ancho máximo para que no se estiren */
+    }
+
+    /* Selecciona los contenedores de las tarjetas */
+    .hardware-cr .col-md-6.col-lg-4 {
+        max-width: 50%;
+    }
+
+    .software-cr.container {
+        max-width: 65%;
+    }
+
+    .software-cr .card {
+        max-width: 350px;
+        margin: auto;
+    }
+
+    .software-cr .cards-section.row {
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+
+    .guias-cr.container {
+        max-width: 65%;
+    }
+
+    .guias-cr .card {
+        max-width: 350px;
+        margin: auto;
+    }
+
+    .guias-cr .cards-section.row {
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+
+}
+
+
+
+@media screen and (max-width: 576px) {
+
+    body {
+        padding-top: 110px;
+    }
+
+    .navbar {
+        min-height: 80px;
+    }
+
+    .navbar-brand img {
+        width: 224px;
+        height: auto;
+    }
+
+    #toggle-theme {
+        margin-top: -20px;
+        margin-right: 10px;
+        /* BACKUP
+        padding: clamp(0.25rem, -0.082rem + 2.66vw, 0.875rem); 
+           BACKUP */
+    }
+
+    /* HACER ALGO SIMILAR PARA LAS DEMÁS PÁGINAS.
+    NOTA Y CONSEJO PARA RECORDAR:
+    PONER max-width EN EL .container Y PORCENTAJE EN EL max-width DE LA .card ! */
+
+    .index-cr.container {
+        max-width: 90%;
+        margin-bottom: 1rem !important;
+    }
+
+    .hardware-cr.container {
+        max-width: 90%;
+        margin-bottom: 1rem !important;
+    }
+
+    .hardware-cr .cards-section {
+        margin-bottom: 3rem;
+    }
+
+    .hardware-cr .col-md-6.col-lg-4 {
+        max-width: 50%;
+        padding: 0 !important;
+    }
+
+    .hardware-cr .card {
+        max-width: 80%;
+        margin: auto;
+    }
+
+    .software-cr.container {
+        max-width: 70%;
+    }
+
+    .software-cr .cards-section {
+        margin-bottom: 4rem;
+    }
+
+    .guias-cr.container {
+        max-width: 70%;
+    }
+
+    .guias-cr .cards-section {
+        margin-bottom: 4rem;
+    }
+
+    .acercade-page main.container {
+        max-width: 90%;
+    }
+
+    .acercade-page .row.justify-content-center {
+        margin-bottom: 40px;
+    }
+
+    .comments-section {
+        margin: 0 auto;
+        max-width: 95%;
+    }
+
+}
+
+
+
+@media screen and (max-width: 370px) {
+    .menu-hamburguesa {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+@media screen and (max-width: 345px) {
+    .navbar-brand img {
+        width: 45vw;
+        /* REDIMENSIONAR LA IMAGEN DEPENDIENDO EL ANCHO DE LA PANTALLA */
+        height: auto;
+    }
+
+    .hardware-cr.container {
+        max-width: 100%;
+    }
+
+    .software-cr.container {
+        max-width: 90%;
+    }
+
+    .guias-cr.container {
+        max-width: 90%;
+    }
+
+}

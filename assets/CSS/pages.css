@@ -1,0 +1,1005 @@
+.page-header h1 {
+    font-family: 'Departure-Mono';
+}
+
+.page-header p {
+    font-size: 24px;
+}
+
+/* ------PAGE-CONTENT------ */
+
+
+/* ACERCA DE - PÁGINA */
+.acercade-content {
+    text-align: justify;
+    /* SACAR EN CASO QUE NO ME GUSTE */
+}
+
+.acercade-content p:last-child {
+    opacity: 0.75;
+    font-size: 0.85rem;
+    font-style: italic;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.page-content h2 {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.page-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.page-content p {
+    font-size: 16px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+li>ul>li {
+    margin-bottom: auto;
+    line-height: 1.6;
+}
+
+.cpu-logos {
+    max-height: 80px;
+    width: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 18px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.content-wrapper {
+    max-width: 100%;
+    /* usa todo su col */
+}
+
+.page-content-images {
+    width: 800px;
+    height: auto;
+    display: block;
+    margin: 1.5rem 0;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.4);
+    border-radius: 3rem;
+}
+
+.page-content-sub-images {
+    width: 300px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    margin: 1.5rem 0;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.4);
+    border-radius: 1.5rem;
+}
+
+/* ACTIVAR O DESACTIVAR OPCIÓN (<SPAN>) - OPTIMIZACIONES */
+.page-content-activarOpcion {
+    color: rgb(42, 201, 49);
+    text-decoration: underline;
+}
+
+.page-content-desactivarOpcion {
+    color: rgb(201, 42, 49);
+    text-decoration: underline;
+}
+
+/* ACTIVAR O DESACTIVAR OPCIÓN (<SPAN>) - OPTIMIZACIONES (FIN) */
+
+
+/* ------OVERLAY DE IMÁGENES------ */
+
+#image-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 9999;
+}
+
+#image-overlay.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#image-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+#image-overlay.visible img {
+    transform: scale(1);
+}
+
+/* Botón cerrar overlay */
+.overlay-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.overlay-close:hover {
+    opacity: 0.7;
+}
+
+/* Cursor en miniaturas */
+.img-ampliable {
+    cursor: zoom-in;
+    transition: filter 0.2s ease;
+}
+
+.img-ampliable:hover {
+    filter: brightness(0.7);
+}
+
+/* ------OVERLAY DE IMÁGENES (FIN)------ */
+
+/* ------PAGE-CONTENT (FIN)------ */
+
+
+
+/* ANIMACIÓN AL HR */
+
+hr {
+    animation: dibujar 0.75s ease-out forwards;
+    margin: 30px auto;
+}
+
+@keyframes dibujar {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* ANIMACIÓN AL HR (FIN) */
+
+
+
+/* ------SIDEBAR------ */
+
+.sidebar {
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    margin-inline-start: auto;
+}
+
+.sidebar-card {
+    background-color: #1b1b1b;
+    border-radius: 24px;
+    border: 1px solid rgba(0, 255, 100, 0.1);
+    margin: 3rem auto;
+    box-shadow: 0 8px 16px rgba(0, 255, 100, 0.15);
+    transition: background-color 0.5s ease;
+}
+
+.sidebar-card:nth-of-type(1) {
+    margin-bottom: 1.5rem !important;
+}
+
+.sidebar-card:nth-of-type(2) {
+    margin-top: 1.5rem !important;
+}
+
+.sidebar-card h4 {
+    background-color: #317e44;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+    padding: 24px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    margin: -1rem -1rem 1rem -1rem;
+    pointer-events: none;
+    transition: background-color 0.5s ease;
+}
+
+.sidebar-card ul li {
+    margin: 0.5rem auto;
+    margin-inline-start: 1rem;
+}
+
+.sidebar-card ul li a {
+    display: inline-block;
+    font-size: 18px;
+    padding: 0px;
+    color: white;
+    text-decoration: none;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.sidebar-card ul li a:hover {
+    color: var(--hover-dark);
+    transform: scale(1.1);
+    transition: transform 0.3s ease, background-color 0.5s ease;
+}
+
+.sidebar-card ul li a.actual {
+    color: var(--hover-dark);
+    transform: scale(1.1);
+    transition: transform 0.3s ease, background-color 0.5s ease;
+}
+
+
+/* SIDEBAR HARDWARE */
+body.hardware-page .sidebar-hardware {
+    display: block;
+}
+
+body.hardware-page .sidebar-software,
+body.hardware-page .sidebar-guias,
+body.hardware-page .sidebar-guias-instalaciones,
+body.hardware-page .sidebar-guias-optimizaciones,
+body.hardware-page .sidebar-guias-consejos {
+    display: none;
+}
+
+
+/* SIDEBAR SOFTWARE */
+body.software-page .sidebar-software {
+    display: block;
+}
+
+body.software-page .sidebar-hardware,
+body.software-page .sidebar-guias,
+body.software-page .sidebar-guias-instalaciones,
+body.software-page .sidebar-guias-optimizaciones,
+body.software-page .sidebar-guias-consejos {
+    display: none;
+}
+
+
+/* <<<SIDEBAR GUÍAS>>> */
+body.guias-page .sidebar-guias {
+    display: block;
+}
+
+body.guias-page .sidebar-hardware,
+body.guias-page .sidebar-software,
+body.guias-page .sidebar-guias-instalaciones,
+body.guias-page .sidebar-guias-optimizaciones,
+body.guias-page .sidebar-guias-consejos {
+    display: none;
+}
+
+/* SIDEBAR GUÍAS-INSTALACIONES */
+
+body.guias-instalaciones-page .sidebar-guias-instalaciones {
+    display: block;
+}
+
+body.guias-instalaciones-page .sidebar-hardware,
+body.guias-instalaciones-page .sidebar-software,
+body.guias-instalaciones-page .sidebar-guias,
+body.guias-instalaciones-page .sidebar-guias-optimizaciones,
+body.guias-instalaciones-page .sidebar-guias-consejos {
+    display: none;
+}
+
+/* SIDEBAR GUÍAS-OPTIMIZACIONES */
+body.guias-optimizaciones-page .sidebar-guias-optimizaciones {
+    display: block;
+}
+
+body.guias-optimizaciones-page .sidebar-hardware,
+body.guias-optimizaciones-page .sidebar-software,
+body.guias-optimizaciones-page .sidebar-guias,
+body.guias-optimizaciones-page .sidebar-guias-instalaciones,
+body.guias-optimizaciones-page .sidebar-guias-consejos {
+    display: none;
+}
+
+/* SIDEBAR GUÍAS-CONSEJOS */
+body.guias-consejos-page .sidebar-guias-consejos {
+    display: block;
+}
+
+body.guias-consejos-page .sidebar-hardware,
+body.guias-consejos-page .sidebar-software,
+body.guias-consejos-page .sidebar-guias,
+body.guias-consejos-page .sidebar-guias-instalaciones,
+body.guias-consejos-page .sidebar-guias-optimizaciones {
+    display: none;
+}
+
+/* <<<SIDEBAR GUÍAS>>> */
+
+
+/* ------SIDEBAR------ */
+
+
+/* TARJETAS HORIZONTALES EN PÁGINAS */
+
+.pages-hcard-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.pages-hcard {
+    display: flex;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 255, 100, 0.12);
+    box-shadow: 0 8px 16px rgba(0, 255, 100, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.5s ease;
+    background-color: var(--card-bg);
+}
+
+.pages-hcard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 255, 100, 0.14);
+}
+
+.pages-hcard-img {
+    width: 200px;
+    height: 150px;
+    flex-shrink: 0;
+    /* evitar que se achique en pantallas pequeñas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s ease;
+    background: var(--card-bg, transparent);
+}
+
+/* IMAGEN o SVG */
+.pages-hcard-img img,
+.pages-hcard-img svg {
+    width: 65%;
+    height: 65%;
+    object-fit: contain;
+    /* sirve para SVG */
+}
+
+.pages-hcard-content {
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Títulos y textos adaptados */
+.pages-hcard-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    transition: color 0.5s ease;
+}
+
+.pages-hcard-content p {
+    font-size: 1rem;
+    margin: 0;
+    color: var(--text-secondary);
+    transition: color 0.5s ease;
+}
+
+/* ------RESPONSIVE------ */
+@media (max-width: 768px) {
+    .pages-hcard {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pages-hcard-img {
+        width: 100%;
+        max-height: 140px;
+        /* más chico para móviles */
+    }
+
+    .pages-hcard-content {
+        padding: 1rem;
+    }
+}
+
+
+/* ------SECCIÓN COMENTARIOS------ */
+
+.hr-comments {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #3a3a3a, transparent);
+    margin-top: 6rem;
+}
+
+.comments-section {
+    padding: 25px;
+    width: 100%;
+
+    background: #131313;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(0, 255, 100, 0.1);
+
+    box-shadow: 0 4px 12px rgba(0, 255, 100, 0.15);
+}
+
+.comments-section h3 {
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    color: white;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+    text-align: center;
+    padding: 25px;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    margin: -1.6rem -1.6rem 1.6rem -1.6rem;
+    background-color: #317e44;
+    pointer-events: none;
+    transition: background-color 0.5s ease;
+}
+
+/* FORMULARIO DE COMENTARIOS */
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#comment-text {
+    resize: none;
+    min-height: 110px;
+
+    padding: 12px;
+    border-radius: 10px;
+
+    border: 1px solid #2c2c2c;
+    background: #1e1e1e;
+    color: white;
+
+    font-family: inherit;
+}
+
+#comment-text::placeholder {
+    color: #888;
+}
+
+#comment-text:focus {
+    outline: none;
+    border: 1px solid rgba(0, 255, 100, 0.25);
+}
+
+.comment-warning {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #ff3d3d;
+}
+
+/* BOTÓN */
+#btn-send-comment {
+    align-self: flex-end;
+
+    margin-top: 6px;
+    padding: 8px 18px;
+    border-radius: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+
+    background-color: #317e44;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+
+    color: white;
+    font-weight: bold;
+
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+#btn-send-comment:hover {
+    transform: translateY(-2px);
+    transition: transform 0.5s ease;
+}
+
+
+
+/* COMENTARIOS PUBLICADOS */
+#comments-list {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.comments-loading {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    font-style: italic;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.comment {
+    padding: 16px 18px;
+    border-radius: 14px;
+
+    background: #181818;
+    border: 1px solid rgba(0, 255, 100, 0.25);
+    word-break: break-word;
+    overflow-wrap: anywhere;
+
+    box-shadow:
+        0 4px 12px rgba(0, 255, 100, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+
+    margin: 18px 0px;
+}
+
+.comment p::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: #3b3b3b;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.no-comments {
+    text-align: center;
+    color: #ccc;
+    pointer-events: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.comment-date {
+    font-size: 0.75rem;
+    color: #888;
+    opacity: 0.75;
+    cursor: default;
+}
+
+.comment-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.comment-user {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(0, 255, 100, 1);
+    border-bottom: 1px solid rgba(0, 255, 100, 0.20);
+    padding-bottom: 2px;
+}
+
+.comment-text {
+    color: #eaeaea;
+    line-height: 1.4;
+    margin: 0 4px 4px 8px;
+}
+
+/* EDICIÓN DE COMENTARIOS #317e44 */
+
+.edit-comment-btn {
+    opacity: 0;
+    background: none;
+    border: none;
+    color: rgb(126, 126, 126);
+    font-size: 0.85rem;
+    cursor: pointer;
+    padding: 0;
+    transition: 0.2s ease;
+    font-style: italic;
+}
+
+.edit-comment-btn:hover {
+    color: #4fc96d;
+    text-decoration: underline;
+}
+
+/* AL HACER HOVER SE MUESTRA EL BOTÓN Editar */
+.comment:hover .edit-comment-btn,
+.comment:hover .delete-comment-btn {
+    opacity: 1;
+}
+
+/* AL HACER HOVER SE MUESTRA EL BOTÓN Editar (FIN) */
+
+
+.edit-textarea {
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #2c2c2c;
+    background: rgba(255, 255, 255, 0.05);
+    color: inherit;
+    resize: none;
+    min-height: 80px;
+    transition: 0.2s ease;
+}
+
+.edit-textarea:focus {
+    outline: none;
+    border: 1px solid rgba(0, 255, 100, 0.25);
+}
+
+.edit-actions {
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.edit-actions button {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: #317e44;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-size: 0.85rem;
+}
+
+.edit-actions button:hover {
+    transform: translateY(-1px);
+    transition: transform 0.5s ease;
+}
+
+/* EDICIÓN DE COMENTARIOS #317e44 */
+
+
+/* --BORRADO DE COMENTARIOS-- */
+
+.delete-comment-btn {
+    opacity: 0;
+    background: none;
+    border: none;
+    color: #ff6e6e;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-style: italic;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.delete-comment-btn:hover {
+    color: #ff3d3d;
+    text-decoration: underline;
+}
+
+/* Dispositivos táctiles */
+@media (hover: none) {
+    .edit-comment-btn {
+        opacity: 1;
+    }
+
+    .delete-comment-btn {
+        opacity: 1;
+    }
+}
+
+/* MODAL BORRAR */
+
+/* Overlay */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+    /* 👈 blur bajo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.25s ease;
+    z-index: 9999;
+}
+
+/* Mostrar modal */
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Caja del modal */
+.custom-modal {
+    background: var(--card-bg, #1e1e1e);
+    padding: 15px 30px;
+    border-radius: 25px;
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    transform: scale(0.8);
+    transition: 0.15s ease;
+}
+
+.custom-modal h3 {
+    background-color: #317e44;
+    color: white;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+    padding: 16px;
+    margin: -1.9rem -1.9rem 0.95rem -1.9rem;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.custom-modal p {
+    margin: 2rem 0 -0.5rem 0;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+}
+
+.custom-modal p::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: #3b3b3b;
+    margin-top: 2rem;
+    margin-left: -30px;
+    width: calc(100% + 60px);
+}
+
+.modal-overlay.active .custom-modal {
+    transform: scale(1);
+}
+
+/* Botones */
+.modal-actions {
+    margin-top: 23px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.btn-cancel {
+    flex: 1;
+    padding: 4px;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-cancel:hover {
+    text-decoration: underline;
+    color: #317e44;
+}
+
+.btn-delete {
+    flex: 1;
+    padding: 4px;
+    border-radius: 18px;
+    border: 1px solid #ff3d3d;
+    background: transparent;
+    color: #ff3d3d;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-delete:hover {
+    background: #ff3d3d;
+    color: white;
+}
+
+/* MODAL DE BORRAR */
+
+/* --BORRADO DE COMENTARIOS-- */
+
+
+
+/* ------SECCIÓN COMENTARIOS (FIN)------ */
+
+
+
+/* ------MODO OSCURO------ */
+
+html:not(.light-theme) {
+    --card-bg: #1b1b1b;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.75);
+}
+
+/* TARJETAS HORIZONTALES EN PÁGINAS -MODO OSCURO- */
+html:not(.light-theme) .pages-hcard:hover {
+    box-shadow: 0 10px 22px rgba(0, 255, 100, 0.25);
+}
+
+/* TARJETAS HORIZONTALES EN PÁGINAS -MODO OSCURO- (FIN) */
+
+
+
+/* ------MODO CLARO------ */
+html.light-theme {
+    --card-bg: rgb(253, 253, 253);
+    --text-primary: rgba(0, 0, 0, 0.85);
+    --text-secondary: rgba(0, 0, 0, 0.60);
+}
+
+/* TARJETAS HORIZONTALES EN PÁGINAS -MODO CLARO- */
+
+html.light-theme .pages-hcard {
+    border: 1px solid rgba(0, 255, 100, 0.30);
+    box-shadow: 0 8px 16px rgba(0, 255, 100, 0.20);
+}
+
+html.light-theme .pages-hcard:hover {
+    box-shadow: 0 8px 16px rgba(0, 255, 100, 0.40);
+}
+
+/* TARJETAS HORIZONTALES EN PÁGINAS -MODO CLARO- (FIN) */
+
+
+/* PAGE CONTENT LIGHT */
+
+html.light-theme .page-content-images {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
+}
+
+html.light-theme .page-content-sub-images {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
+}
+
+/* PAGE CONTENT LIGHT (FIN) */
+
+
+/* ------SIDEBAR LIGHT------ */
+html.light-theme .sidebar-card {
+    background-color: rgb(253, 253, 253);
+    transition: background-color 0.5s ease;
+    border: 1px solid rgba(0, 255, 100, 0.35);
+    box-shadow: 0 8px 16px rgba(0, 255, 100, 0.3);
+}
+
+html.light-theme .sidebar-card h4 {
+    background-color: #4fc96d;
+    transition: background-color 0.5s ease;
+}
+
+html.light-theme .sidebar-card ul li a {
+    color: rgba(0, 0, 0, 0.75);
+}
+
+html.light-theme .sidebar-card ul li a:hover {
+    color: var(--hover-light);
+}
+
+html.light-theme .sidebar-card ul li a.actual {
+    color: var(--hover-light);
+}
+
+/* ------SIDEBAR LIGHT (FIN)------ */
+
+
+
+
+/* ------SECCIÓN COMENTARIOS LIGHT------ */
+
+html.light-theme .hr-comments {
+    background: linear-gradient(to right, transparent, #b4b4b4, transparent);
+}
+
+html.light-theme .comments-section {
+    background: #f1f1f1;
+    border: 1px solid rgba(0, 255, 100, 0.35);
+    box-shadow: 0 4px 12px rgba(0, 255, 100, 0.3);
+}
+
+html.light-theme .comments-section h3 {
+    background-color: #4fc96d;
+    transition: background-color 0.5s ease;
+}
+
+html.light-theme #comment-text {
+    background: #ffffff;
+    color: #111;
+    border: 1px solid #ccc;
+}
+
+html.light-theme #comment-text::placeholder {
+    color: #777;
+}
+
+html.light-theme #comment-text:focus {
+    border: 1px solid rgba(0, 200, 100, 1);
+}
+
+html.light-theme #btn-send-comment {
+    background-color: #4fc96d;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+
+/* MODO LIGHT – COMENTARIOS PUBLICADOS */
+html.light-theme .comment {
+    background: #ffffff;
+    border: 1px solid rgba(0, 255, 100, 0.40);
+    box-shadow: 0 3px 10px rgba(0, 255, 100, 0.25);
+}
+
+
+html.light-theme .comment-user {
+    color: rgba(0, 200, 100, 1);
+    border-bottom: 1px solid rgba(0, 255, 100, 0.35);
+}
+
+html.light-theme .comment-date {
+    color: #666;
+}
+
+html.light-theme .comment-text {
+    color: #222;
+}
+
+html.light-theme .comment p::after {
+    background-color: #ccc;
+}
+
+html.light-theme .no-comments {
+    color: #666;
+}
+
+
+/* MODO LIGHT - EDICIÓN DE COMENTARIOS */
+
+html.light-theme .edit-actions button {
+    background-color: #4fc96d;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+html.light-theme .edit-textarea {
+    border: 1px solid #ccc;
+}
+
+html.light-theme .edit-textarea:focus {
+    border: 1px solid rgba(0, 200, 100, 1);
+}
+
+/* MODO LIGHT - BORRADO DE COMENTARIOS */
+
+html.light-theme .custom-modal h3 {
+    background-color: #4fc96d;
+}
+
+html.light-theme .custom-modal p::after {
+    background-color: #ccc;
+}
+
+html.light-theme .btn-cancel {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+html.light-theme .btn-cancel:hover {
+    color: #4fc96d;
+}
+
+/* MODO LIGHT – COMENTARIOS PUBLICADOS (FIN) */
+
+
+/* ------SECCIÓN COMENTARIOS LIGHT (FIN)------ */
